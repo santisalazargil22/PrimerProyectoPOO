@@ -1,0 +1,9 @@
+# ninja log v5
+14	768	7184927434625991	CMakeFiles/Primer_Proyecto.dir/aeronave.cpp.obj	2d0c771355637d2
+4	562	7185086559854549	CMakeFiles/Primer_Proyecto.dir/main.cpp.obj	5fb28d4c18d5904f
+3	1400	7185276341906498	CMakeFiles/Primer_Proyecto.dir/avion.cpp.obj	c229c6900e379919
+1401	1708	7185276344902430	Primer_Proyecto.exe	6f097d4302b23e49
+3	782	7185288829750639	CMakeFiles/Primer_Proyecto.dir/avion.cpp.obj	c229c6900e379919
+783	933	7185288831243967	Primer_Proyecto.exe	6f097d4302b23e49
+4	710	7185327071079901	CMakeFiles/Primer_Proyecto.dir/avion.cpp.obj	c229c6900e379919
+711	866	7185327072628256	Primer_Proyecto.exe	6f097d4302b23e49
