@@ -2,6 +2,8 @@
 #include "avion.h"
 #include "helicoptero.h"
 #include "jet.h"
+#include "pasajero.h"
+#include "tripulacion.h"
 
 map<int, avion *> mapaAviones;
 
@@ -10,16 +12,22 @@ int main() {
     int opcionPrincipal;
     int opcionAeronave;
     int opcionGestionAeronave;
+    int opcionUsuario;
+    int opcionGestionUsuario;
     avion *pAvion;
     helicoptero *pHelicoptero;
     jet *pJet;
+    pasajero *pPasajero;
+    tripulacion *pTripulacion;
     int idAvion;
     int idHelicoptero;
     int idJet;
+    int idPasajero;
+    int idTripulacion;
 
     cout << "Buenos dias administrador del sistema. Que tarea desea hacer el dia de hoy?" << endl;
     do {
-        cout << "1) Gestion de aeronaves \n5) Salir" << endl;
+        cout << "1) Gestion de aeronaves \n2) Gestion de usuarios \n5) Salir" << endl;
         cin >> opcionPrincipal;
         while (cin.fail()) {
             cin.clear();
@@ -238,6 +246,130 @@ int main() {
                         } while (opcionGestionAeronave != 4);
                         break;
                     case 4:
+                        cout << "Volviendo al menu principal" << endl;
+                        break;
+                    default:
+                        cout << "Opcion invalida" << endl;
+                        break;
+                }
+                break;
+            case 2:
+                cout << "Que tipo de persona gestionara el dia de hoy?" << endl;
+                cout << "1) Pasajeros \n2) Tripulacion \n3) Volver al menu principal" << endl;
+                cin >> opcionUsuario;
+                while (cin.fail()) {
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    cout << "Error: La entrada no fue un valor entero. Ingrese nuevamente:" << endl;
+                    cin >> opcionUsuario;
+                }
+                switch (opcionUsuario) {
+                    case 1:
+                        do {
+                            cout
+                                    << "1) Crear pasajero \n2) Consultar pasajero \n3) Volver al menu"
+                                    << endl;
+                            cin >> opcionGestionUsuario;
+                            while (cin.fail()) {
+                                cin.clear();
+                                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                                cout << "Error: La entrada no fue un valor entero. Ingrese nuevamente:" << endl;
+                                cin >> opcionGestionUsuario;
+                            }
+                            switch (opcionGestionUsuario) {
+                                case 1:
+                                    pPasajero = new pasajero("", "", "", "", "", "", "", "", "", 0, "", 0);
+                                    pPasajero->ingresarInformacion();
+                                    pPasajero->ingresarPasajero(pPasajero->getCedula(), pPasajero->getNombres(),
+                                                                pPasajero->getApellidos(),
+                                                                pPasajero->getFechaNacimiento(),
+                                                                pPasajero->getGenero(),
+                                                                pPasajero->getDireccion(),
+                                                                pPasajero->getNumeroTelefono(),
+                                                                pPasajero->getCorreoElectronico(),
+                                                                pPasajero->getNacionalidad(),
+                                                                pPasajero->getCantidadMaletas(),
+                                                                pPasajero->getInformacionMedica());
+                                    break;
+                                case 2:
+                                    if (pasajero::getMapaPasajeros().empty()) {
+                                        cout << "No existen pasajeros en el sistema" << endl;
+                                    } else {
+                                        cout << "Ingrese el ID del pasajero que desea consultar" << endl;
+                                        cin >> idPasajero;
+                                        while (cin.fail()) {
+                                            cin.clear();
+                                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                                            cout << "Error: La entrada no fue un valor entero. Ingrese nuevamente:"
+                                                 << endl;
+                                            cin >> idPasajero;
+                                        }
+                                        pPasajero->consultarInformacion(idPasajero);
+                                    }
+                                    break;
+                                case 3:
+                                    cout << "Volviendo al menu" << endl;
+                                    break;
+                                default:
+                                    cout << "Opcion invalida" << endl;
+                                    break;
+                            }
+                        } while (opcionGestionUsuario != 3);
+                        break;
+                    case 2:
+                        do {
+                            cout
+                                    << "1) Crear tripulacion \n2) Consultar tripulacion \n3) Volver al menu"
+                                    << endl;
+                            cin >> opcionGestionUsuario;
+                            while (cin.fail()) {
+                                cin.clear();
+                                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                                cout << "Error: La entrada no fue un valor entero. Ingrese nuevamente:" << endl;
+                                cin >> opcionGestionUsuario;
+                            }
+                            switch (opcionGestionUsuario) {
+                                case 1:
+                                    pTripulacion = new tripulacion("", "", "", "", "", "", "", "", "", 0, 0, 0);
+                                    pTripulacion->ingresarInformacion();
+                                    pTripulacion->ingresarTripulacion(pTripulacion->getCedula(),
+                                                                      pTripulacion->getNombres(),
+                                                                      pTripulacion->getApellidos(),
+                                                                      pTripulacion->getFechaNacimiento(),
+                                                                      pTripulacion->getGenero(),
+                                                                      pTripulacion->getDireccion(),
+                                                                      pTripulacion->getNumeroTelefono(),
+                                                                      pTripulacion->getCorreoElectronico(),
+                                                                      pTripulacion->getPuesto(),
+                                                                      pTripulacion->getAniosExperiencia(),
+                                                                      pTripulacion->getHorasTrabajoDiarias());
+                                    break;
+                                case 2:
+                                    if (tripulacion::getMapaTripulacion().empty()) {
+                                        cout << "No existe tripulacion en el sistema" << endl;
+                                    } else {
+                                        cout << "Ingrese el ID de la tripulacion que desea consultar" << endl;
+                                        cin >> idTripulacion;
+                                        while (cin.fail()) {
+                                            cin.clear();
+                                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                                            cout << "Error: La entrada no fue un valor entero. Ingrese nuevamente:"
+                                                 << endl;
+                                            cin >> idTripulacion;
+                                        }
+                                        pTripulacion->consultarInformacion(idTripulacion);
+                                    }
+                                    break;
+                                case 3:
+                                    cout << "Volviendo al menu" << endl;
+                                    break;
+                                default:
+                                    cout << "Opcion invalida" << endl;
+                                    break;
+                            }
+                        } while (opcionGestionUsuario != 3);
+                        break;
+                    case 3:
                         cout << "Volviendo al menu principal" << endl;
                         break;
                     default:
