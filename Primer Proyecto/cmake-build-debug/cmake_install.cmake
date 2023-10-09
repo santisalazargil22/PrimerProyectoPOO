@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Santiago/OneDrive/Documentos/POO/Primer Proyecto
+# Install script for directory: C:/Users/Santiago/OneDrive/Documentos/Programacion/PrimerProyectoPOO/Primer Proyecto
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Santiago/OneDrive/Documentos/POO/Primer Proyecto/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Santiago/OneDrive/Documentos/Programacion/PrimerProyectoPOO/Primer Proyecto/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,3 +1,3 @@
-C:/Users/Santiago/OneDrive/Documentos/POO/Primer Proyecto/cmake-build-debug/CMakeFiles/Primer_Proyecto.dir
-C:/Users/Santiago/OneDrive/Documentos/POO/Primer Proyecto/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Santiago/OneDrive/Documentos/POO/Primer Proyecto/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Santiago/OneDrive/Documentos/Programacion/PrimerProyectoPOO/Primer Proyecto/cmake-build-debug/CMakeFiles/Primer_Proyecto.dir
+C:/Users/Santiago/OneDrive/Documentos/Programacion/PrimerProyectoPOO/Primer Proyecto/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Santiago/OneDrive/Documentos/Programacion/PrimerProyectoPOO/Primer Proyecto/cmake-build-debug/CMakeFiles/rebuild_cache.dir

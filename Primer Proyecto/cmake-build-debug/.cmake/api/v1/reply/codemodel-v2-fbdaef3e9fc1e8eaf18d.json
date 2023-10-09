@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Primer_Proyecto::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Primer_Proyecto-Debug-a09df5421fc3c205e250.json",
+					"jsonFile" : "target-Primer_Proyecto-Debug-fec7095f061f0d50967c.json",
 					"name" : "Primer_Proyecto",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Santiago/OneDrive/Documentos/POO/Primer Proyecto/cmake-build-debug",
-		"source" : "C:/Users/Santiago/OneDrive/Documentos/POO/Primer Proyecto"
+		"build" : "C:/Users/Santiago/OneDrive/Documentos/Programacion/PrimerProyectoPOO/Primer Proyecto/cmake-build-debug",
+		"source" : "C:/Users/Santiago/OneDrive/Documentos/Programacion/PrimerProyectoPOO/Primer Proyecto"
 	},
 	"version" : 
 	{

@@ -7,4 +7,8 @@ add_executable(Primer_Proyecto main.cpp
         aeronave.cpp
         aeronave.h
         avion.cpp
-        avion.h)
+        avion.h
+        helicoptero.cpp
+        helicoptero.h
+        Jet.cpp
+        Jet.h)
