@@ -13,7 +13,7 @@ De igual manera el programa se encuentra cubierto o protegido para que ninguna e
 
 ![image](https://github.com/santisalazargil22/PrimerProyectoPOO/assets/140760877/36da5c21-8c0f-4511-97f2-b43c5c59f32c)  
 ![image](https://github.com/santisalazargil22/PrimerProyectoPOO/assets/140760877/083d27e0-d848-4d3f-8f4b-63b5719ec00b)  
-Siempre se podran crear, consultar y modificar aeronaves y personas de todo tipo, podrimos pensarlo como una base de datos que almacenara  
+Siempre se podran crear, consultar y modificar aeronaves y personas de todo tipo, podriamos pensarlo como una base de datos que almacenara  
 aeronaves y personas y me permitira tener acceso a la informacion de las mismas todo el tiempo  
 
 ![image](https://github.com/santisalazargil22/PrimerProyectoPOO/assets/140760877/1d15094b-5360-4c6b-92f5-9e7ec3bc8dcf)  
