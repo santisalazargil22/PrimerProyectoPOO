@@ -4,6 +4,8 @@
 
 #include "persona.h"
 
+// Otra clase padre que simplemente incializa atributos y metodos sin implementarlos, tal como se hizo con la clase aeronave y posteriormente se heredan
+
 persona::persona(string cedula, string nombres, string apellidos, string fechaNacimiento,
                  string genero, string direccion, string numeroTelefono, string correoElectronico) {
     this->cedula = cedula;

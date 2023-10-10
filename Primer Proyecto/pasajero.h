@@ -8,6 +8,10 @@
 #include <iostream>
 #include "persona.h"
 
+// Misma logica utilizada en las clases correspondientes a avion, helicoptero y jet... con la diferencia de que
+// aqui no existe un metodo para modificacion de datos de una instancia, en este caso la correspondiente a pasajero
+// Lo mismo para la clase tripulacion, por lo tanto no vale la pena comentarla
+
 using namespace std;
 
 class pasajero : public persona {

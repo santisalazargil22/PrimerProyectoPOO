@@ -14,6 +14,8 @@
 
 using namespace std;
 
+// Los atributos deben ser protegidos para que las clases derivadas puedan heredarlos y manejarlos en sus instancias
+
 class aeronave {
 protected:
     string marca;
@@ -27,6 +29,8 @@ protected:
 public:
     aeronave(string marca, string modelo, int capacidadPasajeros, int velocidadMaxima, int autonomia,
              int anioFabricacion, string estado);
+
+    // metodos virtuales puros para poder manejar herencia de metodos con nombres iguales
 
     virtual void ingresarInformacion() = 0;
 

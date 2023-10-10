@@ -11,6 +11,8 @@
 
 using namespace std;
 
+// Otra clase padre que simplemente incializa atributos y metodos sin implementarlos, tal como se hizo con la clase aeronave y posteriormente se heredan
+
 class persona {
 protected:
     string cedula;

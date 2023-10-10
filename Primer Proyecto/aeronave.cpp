@@ -4,6 +4,8 @@
 
 #include "aeronave.h"
 
+// Clase padre que permite gestionar clases derivadas como aviones, helicopteros y jets
+
 aeronave::aeronave(string marca, string modelo, int capacidadPasajeros, int velocidadMaxima, int autonomia,
                    int anioFabricacion, string estado) {
     this->marca = marca;
@@ -15,6 +17,8 @@ aeronave::aeronave(string marca, string modelo, int capacidadPasajeros, int velo
     this->estado = estado;
 }
 
+// Los metodos no se usaran directamente desde la clase de aeronave, por lo tanto no se agrega logica a los metodos
+
 void aeronave::ingresarInformacion() {
 }
 
@@ -23,6 +27,8 @@ void aeronave::consultarInformacion(int idAeronave) {
 
 void aeronave::modificarInformacion(int idAeronave) {
 }
+
+// Metodos getters para los atributos "base" que se crean en la clase aeronave y que se heredaran en las clases derivadas
 
 string aeronave::getMarca() {
     return marca;

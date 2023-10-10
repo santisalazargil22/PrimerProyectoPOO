@@ -79,12 +79,6 @@ build CMakeFiles/Primer_Proyecto.dir/Jet.cpp.obj: CXX_COMPILER__Primer_Proyecto_
   OBJECT_DIR = CMakeFiles\Primer_Proyecto.dir
   OBJECT_FILE_DIR = CMakeFiles\Primer_Proyecto.dir
 
-build CMakeFiles/Primer_Proyecto.dir/vuelo.cpp.obj: CXX_COMPILER__Primer_Proyecto_unscanned_Debug C$:/Users/Santiago/OneDrive/Documentos/Programacion/PrimerProyectoPOO/Primer$ Proyecto/vuelo.cpp || cmake_object_order_depends_target_Primer_Proyecto
-  DEP_FILE = CMakeFiles\Primer_Proyecto.dir\vuelo.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Primer_Proyecto.dir
-  OBJECT_FILE_DIR = CMakeFiles\Primer_Proyecto.dir
-
 build CMakeFiles/Primer_Proyecto.dir/persona.cpp.obj: CXX_COMPILER__Primer_Proyecto_unscanned_Debug C$:/Users/Santiago/OneDrive/Documentos/Programacion/PrimerProyectoPOO/Primer$ Proyecto/persona.cpp || cmake_object_order_depends_target_Primer_Proyecto
   DEP_FILE = CMakeFiles\Primer_Proyecto.dir\persona.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
@@ -103,12 +97,6 @@ build CMakeFiles/Primer_Proyecto.dir/tripulacion.cpp.obj: CXX_COMPILER__Primer_P
   OBJECT_DIR = CMakeFiles\Primer_Proyecto.dir
   OBJECT_FILE_DIR = CMakeFiles\Primer_Proyecto.dir
 
-build CMakeFiles/Primer_Proyecto.dir/puertaEmbarque.cpp.obj: CXX_COMPILER__Primer_Proyecto_unscanned_Debug C$:/Users/Santiago/OneDrive/Documentos/Programacion/PrimerProyectoPOO/Primer$ Proyecto/puertaEmbarque.cpp || cmake_object_order_depends_target_Primer_Proyecto
-  DEP_FILE = CMakeFiles\Primer_Proyecto.dir\puertaEmbarque.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Primer_Proyecto.dir
-  OBJECT_FILE_DIR = CMakeFiles\Primer_Proyecto.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Primer_Proyecto
@@ -117,7 +105,7 @@ build CMakeFiles/Primer_Proyecto.dir/puertaEmbarque.cpp.obj: CXX_COMPILER__Prime
 #############################################
 # Link the executable Primer_Proyecto.exe
 
-build Primer_Proyecto.exe: CXX_EXECUTABLE_LINKER__Primer_Proyecto_Debug CMakeFiles/Primer_Proyecto.dir/main.cpp.obj CMakeFiles/Primer_Proyecto.dir/aeronave.cpp.obj CMakeFiles/Primer_Proyecto.dir/avion.cpp.obj CMakeFiles/Primer_Proyecto.dir/helicoptero.cpp.obj CMakeFiles/Primer_Proyecto.dir/Jet.cpp.obj CMakeFiles/Primer_Proyecto.dir/vuelo.cpp.obj CMakeFiles/Primer_Proyecto.dir/persona.cpp.obj CMakeFiles/Primer_Proyecto.dir/pasajero.cpp.obj CMakeFiles/Primer_Proyecto.dir/tripulacion.cpp.obj CMakeFiles/Primer_Proyecto.dir/puertaEmbarque.cpp.obj
+build Primer_Proyecto.exe: CXX_EXECUTABLE_LINKER__Primer_Proyecto_Debug CMakeFiles/Primer_Proyecto.dir/main.cpp.obj CMakeFiles/Primer_Proyecto.dir/aeronave.cpp.obj CMakeFiles/Primer_Proyecto.dir/avion.cpp.obj CMakeFiles/Primer_Proyecto.dir/helicoptero.cpp.obj CMakeFiles/Primer_Proyecto.dir/Jet.cpp.obj CMakeFiles/Primer_Proyecto.dir/persona.cpp.obj CMakeFiles/Primer_Proyecto.dir/pasajero.cpp.obj CMakeFiles/Primer_Proyecto.dir/tripulacion.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Primer_Proyecto.dir

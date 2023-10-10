@@ -12,13 +12,9 @@ add_executable(Primer_Proyecto main.cpp
         helicoptero.h
         Jet.cpp
         Jet.h
-        vuelo.cpp
-        vuelo.h
         persona.cpp
         persona.h
         pasajero.cpp
         pasajero.h
         tripulacion.cpp
-        tripulacion.h
-        puertaEmbarque.cpp
-        puertaEmbarque.h)
+        tripulacion.h)

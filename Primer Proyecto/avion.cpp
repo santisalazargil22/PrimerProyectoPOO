@@ -4,8 +4,13 @@
 
 #include "avion.h"
 
+// Inicializacion del contador de aeronave correspondiente que funcionara como llave de la instancia en el mapa
+// Inicializacion del mapa tambien, esto me permitira el manejo global del contador y del mapa
+
 int avion::contadorAviones;
 map<int, avion *> avion::mapaAviones;
+
+// Constructor donde especifican los atributos heredados y se inicializan los "especificos de la clase heredada"
 
 avion::avion(string marca, string modelo, int capacidadPasajeros, int velocidadMaxima, int autonomia,
              int anioFabricacion, string estado, int altitudMaxima, int cantidadMotores, string categoria, int id)
@@ -25,6 +30,8 @@ void avion::ingresarInformacion() {
     cin.ignore();
     getline(cin, marca);
 
+    // Funcion cin.ignore() para borrar el buffer de entrada del cin y permitir manejo de entradas de tipo string con espacios de por medio
+
     cout << "Modelo del avion?" << endl;
     getline(cin, modelo);
 
@@ -38,6 +45,8 @@ void avion::ingresarInformacion() {
     } while (estado != "servicio" && estado != "Servicio" && estado != "asignado" && estado != "Asignado" &&
              estado != "mantenimiento" && estado != "Mantenimiento");
 
+    // Casos do while que se aseguran que se sigan pidiendo datos mientras la entrada no sea una de las estimadas
+
     do {
         cout << "Categoria del avion? (comercial, carga)" << endl;
         getline(cin, categoria);
@@ -45,6 +54,9 @@ void avion::ingresarInformacion() {
             cout << "Las opciones validas son las de los parentesis" << endl;
         }
     } while (categoria != "comercial" && categoria != "Comercial" && categoria != "carga" && categoria != "Carga");
+
+    // Manejo de caso donde se espera un valor int y se mete uno distinto, si la entrada esperada falla se limpia la bandera de error
+    // despues se limpian TODOS los valores de entrada del buffer correspondientes a la entrada errada y finalmente vuelve a pedir el dato
 
     cout << "Capacidad de pasajeros del avion?" << endl;
     cin >> capacidadPasajeros;
@@ -107,7 +119,9 @@ avion::ingresarAvion(string marca, string modelo, int capacidadPasajeros, int ve
                      string categoria) {
     avion *pAvion = new avion(marca, modelo, capacidadPasajeros, velocidadMaxima, autonomia, anioFabricacion,
                               estado, altitudMaxima, cantidadMotores, categoria, contadorAviones);
+    // Nueva instancia que se crea y recibe dentro de su constructor como id de referencia un contador que se actualiza automaticamente
     mapaAviones.insert({contadorAviones, pAvion});
+    // Como se observa la llave utilizada es el contador
     cout << "Se registro el avion de id " << contadorAviones << endl;
     contadorAviones++;
 }
@@ -115,6 +129,9 @@ avion::ingresarAvion(string marca, string modelo, int capacidadPasajeros, int ve
 void avion::consultarInformacion(int idAvion) {
     map<int, avion *>::iterator itAvion;
     itAvion = mapaAviones.find(idAvion);
+    // Iterador que funcionara como valor que encuentra el id que se esta bsucando correspondiente a la instancia de la aeronave
+    // En caso de encontrarla dentro del mapa sera igual al segundo valor del iterador que corresponde a la aeronave que se busca
+    // Finalmente imprimira todos los valores de la aeronave uno por uno
     if (itAvion != mapaAviones.end()) {
         avion *pAvion = itAvion->second;
         cout << "El avion de id " << idAvion << " fue encontrado" << endl;
@@ -134,6 +151,7 @@ void avion::consultarInformacion(int idAvion) {
     }
 }
 
+// Este metodo realiza la misma verificacion de encontrar el dato (id) buscado al inicio
 void avion::modificarInformacion(int idAvion) {
     string verificarEstado;
     map<int, avion *>::iterator itAvion;
@@ -146,12 +164,15 @@ void avion::modificarInformacion(int idAvion) {
                 << "1) Marca \n2) Modelo \n3) Capacidad de pasajeros \n4) Velocidad maxima \n5) Autonomia \n6) Anio de fabricacion \n7) Estado \n8) Altitud maxima \n9) Cantidad de motores \n10) Categoria"
                 << endl;
         cin >> opcion;
+        // Bucle while que como se explico mas arriba evita que la entrada del menu switch sea distinta de un entero
         while (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "Error: La entrada no fue un valor entero. Ingrese nuevamente:" << endl;
             cin >> opcion;
         }
+        // Switch para elegir el atributo que se desea modificar y cambiar su valor... dependiendo del tipo de dato a modificar
+        // utiliza el "manejo de excepciones" que ya explique mas arriba
         switch (opcion) {
             case 1:
                 cout << "Ingrese la nueva marca" << endl;

@@ -5,8 +5,6 @@
 #include "pasajero.h"
 #include "tripulacion.h"
 
-map<int, avion *> mapaAviones;
-
 int main() {
 
     int opcionPrincipal;
@@ -24,6 +22,15 @@ int main() {
     int idJet;
     int idPasajero;
     int idTripulacion;
+
+    // Lo siguiente es el manejo de varias switchs anidados que me permitiran manejar las opcion de mi menu,
+    // un primer switch para decidir que se quiere hacer dentro del sistema como opcion principal.
+    // Un segundo switch para los casos de gestion de instancias donde el ususario indicara con que clases desea trabajar.
+    // Por ultimo un switch para indicar con esa clase que se desea hacer, si ingresar una instancia, consultra o modificar.
+    // Por cuestiones de no enredar el codigo de abajo mas... pondre este comentario aqui: A la hora de trabajar con una
+    // clase en concreto se realizara una verificacion donde no se podra consultar ni modificar las instancias si ninguna ha
+    // sido agregada aun, es decir, si los mapas estan vacios no se podra acceder a sus datos internos.
+    // El resto son modificaciones y "manejo de excepciones" colocados e identados muy cuidadosamente.
 
     cout << "Buenos dias administrador del sistema. Que tarea desea hacer el dia de hoy?" << endl;
     do {
